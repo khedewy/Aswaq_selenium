@@ -1,0 +1,73 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+    <parameter name="browser" value="chrome" />
+    <test name="Regression Test in chrome">
+        <classes>
+            <class name="tests.RegisterTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                </methods>
+            </class>
+            <class name="tests.AddAddressTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                    <include name="navigateToAddressPage"/>
+                    <include name="addNewAddress"/>
+                </methods>
+            </class>
+            <class name="tests.EditProfileTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                    <include name="navigateToProfilePage" />
+                    <include name="editProfileInf" />
+                </methods>
+            </class>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                    <include name="logout"/>
+                    <include name="navigateToLoginPageAndEnterLoginData"/>
+                </methods>
+            </class>
+
+            <class name="tests.SearchTest">
+                <methods>
+                    <include name="searchForProducts" />
+                </methods>
+            </class>
+            <class name="tests.UpdateWishlistTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                    <include name="searchForProducts"/>
+                    <include name="navigateToProduct"/>
+                    <include name="moveToWishList"/>
+                    <include name="removeProductFromWishlist"/>
+                    <include name="changeListName"/>
+                    <include name="deleteWishlist"/>
+                </methods>
+            </class>
+            <class name="tests.WishListTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                    <include name="searchForProducts"/>
+                    <include name="navigateToProduct"/>
+                    <include name="moveToWishList"/>
+                </methods>
+            </class>
+            <class name="tests.WriteReviewTest">
+                <methods>
+                    <include name="navigateToRegisterPage" />
+                    <include name="enterRegisterData" />
+                    <include name="searchForProduct"/>
+                    <include name="writeReview"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
